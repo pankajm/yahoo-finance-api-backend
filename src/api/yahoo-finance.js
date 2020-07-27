@@ -14,6 +14,7 @@ async function getYahooFinanceNews() {
   }
   catch (ex) {
     console.log(ex);
+    return;
     // In production this should be logged with logger module or 
     // remote logging service like sentry
   }
@@ -28,6 +29,7 @@ async function getYahooFinanceAnalysis() {
   }
   catch (ex) {
     console.log(ex);
+    return;
   }
 }
 

@@ -21,3 +21,11 @@ app.use('/api/analysis', analysisApi);
 
 yahooFinanceApi.getAnalysis();
 yahooFinanceApi.getNews();
+
+process.on('uncaughtException', function (ex) {
+  console.log(ex.message);
+})
+
+process.on('unhandledRejection', function (ex) {
+  console.log(ex.message);
+})
