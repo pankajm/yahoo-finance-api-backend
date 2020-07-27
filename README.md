@@ -30,6 +30,11 @@ The APIs in this app are meant to be fast as it uses cron which runs as soon as 
 
 ### (P.S. If the port is busy it will ask you to run the app on other port)
 
-4. Once server starts the cron will start fetching data from RapidAPI and store it in app memory. This is to make exposed APIs more robust. Once finished it will pop up message as cron completed !. APIs exposed in app then fetches this data from application memory. Please note that this cron can be triggered periodically in production to get updated data. Also the data can be stored in DB or Cache like Redis to make it data more persistent.
+4. Once server starts the cron will start fetching data from RapidAPI and store it in app memory. This is to make exposed APIs more robust. Once finished it will pop up message as cron completed !. APIs exposed in app then fetches this data from application memory. Please note that this cron can be triggered periodically in production to get updated data.
+
+5. Open browser or any Rest Client (ex-Postman). Send Get request to following two end points to get the data.
+
+  *localhost:3000/api/news*
+  *localhost:3000/api/analysis*
 
 ### End 
