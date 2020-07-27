@@ -1,13 +1,14 @@
+/** This module contains Yahoo finance APIs fetching data from RapidAPI */
+
+
 const httpService = require("../services/httpService")
 const dataService = require("../services/data");
-
-const yahoo_finance_news_apiEndpoint = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?region=US&&category=NBEV"
-const yahoo_finance_analysis_apiEndpoint = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=AMRN"
+const apiConstants = require("../constants/api")
 
 async function getYahooFinanceNews() {
   try {
     console.log("Getting news data");
-    const { data } = await httpService.get(yahoo_finance_news_apiEndpoint);
+    const { data } = await httpService.get(apiConstants.YAHOO_FINANCE_NEWS_API_ENDPOINT);
     console.log("got news api response");
     return dataService.setNewsData(data);
   }
@@ -21,7 +22,7 @@ async function getYahooFinanceNews() {
 async function getYahooFinanceAnalysis() {
   try {
     console.log("Getting analytics data");
-    const { data } = await httpService.get(yahoo_finance_analysis_apiEndpoint);
+    const { data } = await httpService.get(apiConstants.YAHOO_FINANCE_ANALYSIS_API_ENDPOINT);
     console.log("got analytics api response");
     return dataService.setAnalysisData(data);
   }

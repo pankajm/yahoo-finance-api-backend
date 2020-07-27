@@ -1,4 +1,5 @@
 const axios = require("axios");
+const apiConstants = require("../constants/api")
 
 axios.interceptors.response.use(null, (error) => {
   const expectedError =
@@ -14,8 +15,8 @@ axios.interceptors.response.use(null, (error) => {
   return Promise.reject(error);
 });
 
-axios.defaults.headers.common["x-rapidapi-host"] = "apidojo-yahoo-finance-v1.p.rapidapi.com";
-axios.defaults.headers.common["x-rapidapi-key"] = "a978ca033dmsh15453c32baeb978p166a9ajsn9c91965b02b4";
+axios.defaults.headers.common["x-rapidapi-host"] = apiConstants.RAPIDAPI_HOST;
+axios.defaults.headers.common["x-rapidapi-key"] = apiConstants.RAPIDAPI_KEY;
 axios.defaults.headers.common["useQueryString"] = true;
 
 module.exports = {

@@ -3,7 +3,12 @@ const router = express.Router();
 const dataService = require('../services/data');
 
 router.get('/', (req, res) => {
-  return res.status(200).send(dataService.getAnalysisData());
+  try {
+    return res.status(200).send(dataService.getAnalysisData());
+  }
+  catch (ex) {
+    return res.status(500).send('Error occured in retriving data');
+  }
 })
 
 module.exports = router;

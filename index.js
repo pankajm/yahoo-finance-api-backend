@@ -3,11 +3,12 @@ const app = express();
 const newsApi = require('./src/routes/news');
 const analysisApi = require('./src/routes/analysis');
 const yahooFinanceApi = require('./src/api/yahoo-finance');
-/* This is like cron job */
 
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
+
+/** Application APIs  */
 
 app.use('/api/news', newsApi);
 app.use('/api/analysis', analysisApi);

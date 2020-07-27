@@ -1,5 +1,5 @@
-/** Data service, currently serving data from application memory. 
- * In production data will be stored and fetched from DB or cache like Redis
+/** Data service - currently serving data from application memory. 
+ * In production data can be stored and fetched from DB or cache like Redis
  */
 
 let analysisData = {}

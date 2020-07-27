@@ -1,0 +1,6 @@
+{
+  "YAHOO_FINANCE_NEWS_API_ENDPOINT": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/get-news?region=US&&category=NBEV",
+  "YAHOO_FINANCE_ANALYSIS_API_ENDPOINT": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-analysis?symbol=AMRN",
+  "RAPIDAPI_HOST": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+  "RAPIDAPI_KEY": "a978ca033dmsh15453c32baeb978p166a9ajsn9c91965b02b4"
+}
