@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 const newsApi = require('./src/routes/news');
 const analysisApi = require('./src/routes/analysis');
 const getYahooFinanceData = require("./src/cron/yahoo-finance");
@@ -8,10 +9,13 @@ const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.log(`App listening on port ${port}`));
 
-/** Application APIs  */
+/** Middleware */
+app.use(morgan('tiny'));
 
+/** Application APIs  */
 app.use('/api/news', newsApi);
 app.use('/api/analysis', analysisApi);
+
 
 /**
  * Following cron will fetch data from Yahoo finance APIs on RapidAPI
