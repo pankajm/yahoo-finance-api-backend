@@ -35,6 +35,7 @@ The APIs in this app are meant to be fast as it uses cron which runs as soon as 
 5. Open browser or any Rest Client (ex-Postman). Send Get request to following two end points to get the data.
 
   *localhost:3000/api/news*
+  
   *localhost:3000/api/analysis*
 
 ### End 
